@@ -3,4 +3,4 @@
 ![image](/.github/preview.png)
 
 - [x] Light mode
-- [] Dark mode
+- [ ] Dark mode
