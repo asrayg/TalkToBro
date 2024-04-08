@@ -8,7 +8,7 @@ export default function Home() {
         <Text style={{ fontSize: 24, fontWeight: "900" }}>Hello World</Text>
         <View>
           <TouchableOpacity>
-            <SquarePen />
+            <SquarePen size={24} />
           </TouchableOpacity>
         </View>
       </View>
