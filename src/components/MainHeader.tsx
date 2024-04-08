@@ -8,7 +8,13 @@ import {
   View,
 } from "react-native";
 
-export const MainHeader = () => {
+type MainHeaderProps = {
+  search: string;
+  onSearchChange: (text: string) => void;
+  onSearch: () => void;
+};
+
+export const MainHeader = (props: MainHeaderProps) => {
   return (
     <View style={styles.header}>
       <View style={styles.headerTop}>
@@ -32,6 +38,10 @@ export const MainHeader = () => {
           numberOfLines={1}
           multiline={false}
           keyboardType="web-search"
+          onChangeText={props.onSearchChange}
+          value={props.search}
+          onSubmitEditing={props.onSearch}
+          blurOnSubmit
         />
         <Mic size={20} color={colors.zinc[400]} />
       </View>

@@ -4,15 +4,36 @@ import { colors } from "@/theme/colors";
 import { Message } from "@/components/Message";
 import { messagesArray } from "@/utils/messages";
 import { StatusBar } from "expo-status-bar";
+import React from "react";
 
 export default function Home() {
+  const [search, setSearch] = React.useState("");
+  const [messages, setMessages] = React.useState(messagesArray);
+
+  const handleSearchChange = (text: string) => {
+    setSearch(text);
+  };
+
+  const handleSearch = () => {
+    setMessages(
+      messagesArray.filter(
+        (message) =>
+          message.name.includes(search) || message.message.includes(search)
+      )
+    );
+  };
+
   return (
     <ScrollView style={styles.container}>
       <StatusBar style="inverted" backgroundColor={colors.zinc[100]} />
-      <MainHeader />
+      <MainHeader
+        onSearch={handleSearch}
+        search={search}
+        onSearchChange={handleSearchChange}
+      />
 
       <View style={styles.messageContainer}>
-        {messagesArray.map((item) => (
+        {messages.map((item) => (
           <Message key={item.id} data={item} />
         ))}
       </View>
