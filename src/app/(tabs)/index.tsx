@@ -1,13 +1,14 @@
-import { ScrollView, StyleSheet, StatusBar, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 import { MainHeader } from "@/components/MainHeader";
 import { colors } from "@/theme/colors";
 import { Message } from "@/components/Message";
 import { messagesArray } from "@/utils/messages";
+import { StatusBar } from "expo-status-bar";
 
 export default function Home() {
   return (
     <ScrollView style={styles.container}>
-      <StatusBar translucent barStyle={"dark-content"} />
+      <StatusBar style="inverted" backgroundColor={colors.zinc[100]} />
       <MainHeader />
 
       <View style={styles.messageContainer}>
