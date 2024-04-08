@@ -7,7 +7,7 @@ export default function TabLayout() {
       <StatusBar translucent style="inverted" />
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="index" />
-        <Stack.Screen name="message" />
+        <Stack.Screen name="message/[id]" />
       </Stack>
     </>
   );

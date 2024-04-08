@@ -2,6 +2,7 @@ import { ScrollView, StyleSheet, StatusBar, View } from "react-native";
 import { MainHeader } from "@/components/MainHeader";
 import { colors } from "@/theme/colors";
 import { Message } from "@/components/Message";
+import { messagesArray } from "@/utils/messages";
 
 export default function Home() {
   return (
@@ -10,27 +11,9 @@ export default function Home() {
       <MainHeader />
 
       <View style={styles.messageContainer}>
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
-        <Message />
+        {messagesArray.map((item) => (
+          <Message key={item.id} data={item} />
+        ))}
       </View>
     </ScrollView>
   );
@@ -46,5 +29,6 @@ const styles = StyleSheet.create({
     flex: 1,
     gap: 8,
     padding: 16,
+    paddingBottom: 46,
   },
 });

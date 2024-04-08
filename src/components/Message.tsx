@@ -1,20 +1,32 @@
 import { colors } from "@/theme/colors";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { messagesArray } from "@/utils/messages";
+import { useRouter } from "expo-router";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export const Message = () => {
+type MessageProps = {
+  data: (typeof messagesArray)[0];
+};
+
+export const Message = (props: MessageProps) => {
+  const router = useRouter();
+
+  const handlePress = () => {
+    router.push(`/(tabs)/message/${props.data.id}`);
+  };
+
   return (
-    <View style={styles.container}>
-      <Image source={require("@/assets/avatar.png")} style={styles.avatar} />
+    <TouchableOpacity onPress={handlePress} style={styles.container}>
+      <Image source={props.data.avatar} style={styles.avatar} />
       <View style={styles.textsContainer}>
         <View style={styles.textsFirstRow}>
-          <Text style={styles.textSenderName}>Daisy Tinsley</Text>
-          <Text style={styles.textSentTime}>9:40 AM</Text>
+          <Text style={styles.textSenderName}>{props.data.name}</Text>
+          <Text style={styles.textSentTime}>{props.data.time}</Text>
         </View>
         <Text style={styles.textsMessagePreview} numberOfLines={2}>
-          Maybe email isn't the best form of communication.
+          {props.data.message}
         </Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
