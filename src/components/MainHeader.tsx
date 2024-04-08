@@ -41,7 +41,7 @@ export const MainHeader = () => {
 
 const styles = StyleSheet.create({
   header: {
-    paddingHorizontal: 12,
+    paddingHorizontal: 16,
     paddingTop: 46,
     backgroundColor: colors.zinc[100],
     gap: 10,
