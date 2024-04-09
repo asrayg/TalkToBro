@@ -5,12 +5,14 @@ import {
   TouchableOpacity,
   StyleSheet,
   Image,
+  FlatList,
 } from "react-native";
 import { ChevronLeft, SquarePen } from "lucide-react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { colors } from "@/theme/colors";
-import { messagesArray } from "@/utils/messages";
+import { conversationMessages, messagesArray } from "@/utils/messages";
+import { ConversationMessage } from "@/components/ConversationMessage";
 
 export default function Home() {
   const { id } = useLocalSearchParams();
@@ -26,7 +28,7 @@ export default function Home() {
   }
 
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       <StatusBar style="inverted" backgroundColor={colors.zinc[200]} />
       <View style={styles.header}>
         <TouchableOpacity onPress={handleBack} style={styles.headerBackButton}>
@@ -38,7 +40,19 @@ export default function Home() {
         </View>
         <View style={{ width: 40, height: 40 }} />
       </View>
-    </ScrollView>
+
+      <FlatList
+        data={conversationMessages}
+        keyExtractor={(item) => String(item.id)}
+        renderItem={({ item }) => {
+          return <ConversationMessage data={item} />;
+        }}
+        contentContainerStyle={{
+          padding: 16,
+          gap: 10,
+        }}
+      />
+    </View>
   );
 }
 
