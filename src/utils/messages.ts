@@ -1,3 +1,60 @@
+interface Message {
+  id: number;
+  amISender: boolean;
+  text: string;
+}
+
+export const conversationMessages: Message[] = [
+  { id: 1, amISender: true, text: "Olá, como vai?" },
+  { id: 2, amISender: false, text: "Estou bem, obrigado! E você?" },
+  { id: 3, amISender: true, text: "Tudo bem por aqui também, obrigado!" },
+  { id: 4, amISender: false, text: "Ótimo saber!" },
+  { id: 5, amISender: true, text: "Está fazendo algo interessante hoje?" },
+  { id: 6, amISender: false, text: "Não, só relaxando em casa. E você?" },
+  {
+    id: 7,
+    amISender: true,
+    text: "Eu estou trabalhando em um projeto pessoal.",
+  },
+  {
+    id: 8,
+    amISender: false,
+    text: "Que legal! Qual projeto você está trabalhando?",
+  },
+  {
+    id: 9,
+    amISender: true,
+    text: "É um aplicativo de gerenciamento de tarefas.",
+  },
+  {
+    id: 10,
+    amISender: false,
+    text: "Interessante! Espero que seja um sucesso.",
+  },
+  {
+    id: 11,
+    amISender: true,
+    text: "Obrigado! Estou trabalhando duro para isso.",
+  },
+  { id: 12, amISender: false, text: "Eu acredito em você!" },
+  {
+    id: 13,
+    amISender: true,
+    text: "Vamos sair para tomar um café algum dia desses?",
+  },
+  { id: 14, amISender: false, text: "Claro, adoraria!" },
+  {
+    id: 15,
+    amISender: true,
+    text: "Perfeito! Vou te enviar uma mensagem para marcarmos.",
+  },
+  { id: 16, amISender: false, text: "Estou ansioso por isso!" },
+  { id: 17, amISender: true, text: "Eu também!" },
+  { id: 18, amISender: false, text: "Nos vemos em breve então." },
+  { id: 19, amISender: true, text: "Até logo!" },
+  { id: 20, amISender: false, text: "Até logo!" },
+];
+
 export const messagesArray = [
   {
     id: Math.random().toString(36).slice(2),
