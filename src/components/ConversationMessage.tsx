@@ -31,6 +31,7 @@ export const ConversationMessage = (props: ConversationMessageProps) => {
       >
         {props.data.text}
       </Text>
+      <View style={styles.bubbleArrow} />
     </View>
   );
 };
@@ -48,5 +49,14 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 17,
     lineHeight: 22,
+  },
+
+  bubbleArrow: {
+    width: 20,
+    height: 20,
+    backgroundColor: "tomato",
+    position: "absolute",
+    bottom: 0,
+    right: -12,
   },
 });
