@@ -1,14 +1,13 @@
 import {
   View,
   Text,
-  ScrollView,
   TouchableOpacity,
   StyleSheet,
   Image,
   FlatList,
   TextInput,
 } from "react-native";
-import { AudioLines, ChevronLeft, SquarePen } from "lucide-react-native";
+import { AudioLines, ChevronLeft } from "lucide-react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { colors } from "@/theme/colors";
