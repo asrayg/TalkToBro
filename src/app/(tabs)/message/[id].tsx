@@ -6,8 +6,9 @@ import {
   StyleSheet,
   Image,
   FlatList,
+  TextInput,
 } from "react-native";
-import { ChevronLeft, SquarePen } from "lucide-react-native";
+import { AudioLines, ChevronLeft, SquarePen } from "lucide-react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { colors } from "@/theme/colors";
@@ -52,6 +53,18 @@ export default function Home() {
           gap: 10,
         }}
       />
+      <View style={styles.inputWrapper}>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.input}
+            placeholderTextColor={colors.zinc[400]}
+            placeholder="To: company name"
+          />
+          <TouchableOpacity style={styles.iconContainer}>
+            <AudioLines size={24} color={colors.zinc["600"]} />
+          </TouchableOpacity>
+        </View>
+      </View>
     </View>
   );
 }
@@ -92,4 +105,29 @@ const styles = StyleSheet.create({
     lineHeight: 13,
     color: colors.zinc["800"],
   },
+
+  inputWrapper: {
+    width: "100%",
+    backgroundColor: colors.zinc[50],
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+  },
+
+  inputContainer: {
+    flexDirection: "row",
+    gap: 8,
+    height: 32,
+    borderWidth: 1,
+    borderColor: colors.zinc[300],
+    borderRadius: 32,
+    padding: 8,
+    paddingHorizontal: 16,
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+
+  input: {
+    flex: 1,
+  },
+  iconContainer: {},
 });
