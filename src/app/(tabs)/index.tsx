@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <ScrollView style={styles.container}>
-      <StatusBar style="inverted" backgroundColor={colors.zinc[100]} />
+      <StatusBar style="dark" backgroundColor={colors.zinc[100]} />
       <MainHeader
         onSearch={handleSearch}
         search={search}

@@ -2,6 +2,8 @@ import { colors } from "@/theme/colors";
 import { conversationMessages } from "@/utils/messages";
 import { StyleSheet, Text, View } from "react-native";
 
+import { LinearGradient } from "expo-linear-gradient";
+
 type ConversationMessageProps = {
   data: (typeof conversationMessages)[0];
 };
@@ -31,7 +33,17 @@ export const ConversationMessage = (props: ConversationMessageProps) => {
       >
         {props.data.text}
       </Text>
-      <View style={styles.bubbleArrow} />
+      <LinearGradient
+        style={styles.bubbleArrow}
+        colors={[
+          colors.blue["normal"],
+          colors.blue["normal"],
+          "transparent",
+          "transparent",
+        ]}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 1 }}
+      />
     </View>
   );
 };
@@ -52,11 +64,11 @@ const styles = StyleSheet.create({
   },
 
   bubbleArrow: {
-    width: 20,
-    height: 20,
-    backgroundColor: "tomato",
+    width: 12,
+    height: 12,
     position: "absolute",
-    bottom: 0,
-    right: -12,
+    top: 2,
+    right: -8,
+    borderTopLeftRadius: 12,
   },
 });

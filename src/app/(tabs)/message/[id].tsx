@@ -29,7 +29,7 @@ export default function Home() {
 
   return (
     <View style={styles.container}>
-      <StatusBar style="inverted" backgroundColor={colors.zinc[200]} />
+      <StatusBar style="dark" backgroundColor={colors.zinc[200]} />
       <View style={styles.header}>
         <TouchableOpacity onPress={handleBack} style={styles.headerBackButton}>
           <ChevronLeft size={24} color={colors.zinc["600"]} />
