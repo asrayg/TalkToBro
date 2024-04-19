@@ -60,12 +60,12 @@ const styles = StyleSheet.create({
   },
   textSentTime: {
     fontSize: 15,
-    color: colors.zinc["400"],
+    color: colors.zinc["600"],
     lineHeight: 20,
   },
   textsMessagePreview: {
     fontSize: 15,
-    color: colors.zinc["400"],
+    color: colors.zinc["600"],
     lineHeight: 20,
   },
 });

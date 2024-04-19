@@ -77,6 +77,7 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: colors.zinc[100],
   },
 
   header: {
@@ -116,7 +117,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.zinc[50],
     paddingVertical: 8,
     paddingHorizontal: 16,
-    marginBottom: 8,
+    paddingBottom: 8,
   },
 
   inputContainer: {

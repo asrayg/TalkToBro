@@ -42,6 +42,7 @@ export const MainHeader = (props: MainHeaderProps) => {
           value={props.search}
           onSubmitEditing={props.onSearch}
           blurOnSubmit
+          placeholderTextColor={colors.zinc[500]}
         />
         <Mic size={20} color={colors.zinc[400]} />
       </View>
@@ -67,6 +68,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 34,
     fontWeight: "bold",
+    color: colors.zinc[900],
   },
 
   headerRight: {
