@@ -6,6 +6,8 @@ import {
   Image,
   FlatList,
   TextInput,
+  KeyboardAvoidingView,
+  Platform,
 } from "react-native";
 import { AudioLines, ChevronLeft } from "lucide-react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
@@ -52,7 +54,11 @@ export default function Home() {
           gap: 10,
         }}
       />
-      <View style={styles.inputWrapper}>
+      <KeyboardAvoidingView
+        behavior="padding"
+        enabled={Platform.OS === "ios"}
+        style={styles.inputWrapper}
+      >
         <View style={styles.inputContainer}>
           <TextInput
             style={styles.input}
@@ -63,7 +69,7 @@ export default function Home() {
             <AudioLines size={24} color={colors.zinc["600"]} />
           </TouchableOpacity>
         </View>
-      </View>
+      </KeyboardAvoidingView>
     </View>
   );
 }
@@ -110,6 +116,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.zinc[50],
     paddingVertical: 8,
     paddingHorizontal: 16,
+    marginBottom: 8,
   },
 
   inputContainer: {
