@@ -5,13 +5,6 @@ const isDarkMode = colorScheme === "dark";
 
 export const colors = isDarkMode
   ? {
-      grey: {
-        100: "#ffffff",
-        200: "#F9F9F9",
-        300: "#767680",
-        400: "#3C3C43",
-        500: "#000000",
-      },
       zinc: {
         "950": "#fafafa",
         "900": "#f4f4f5",
