@@ -58,70 +58,48 @@ export const conversationMessages: Message[] = [
 export const messagesArray = [
   {
     id: "1",
-    name: "Company Name",
+    name: "Feelings Bro",
     message:
-      "That's great, I can help you with that! What type of product are you...",
+      "Talk to feelings bro if you're down 😞.",
     time: "9:45 AM",
-    avatar: require("@/assets/img-1.png"),
+    avatar: require("@/assets/1.png"),
   },
   {
     id: "2",
-    name: "Stephen Yustiono",
+    name: "Questions Bro",
     message:
       "Nice. I don't know why people get all worked up about hawaiian pizza. I ...",
     time: "10:30 AM",
-    avatar: require("@/assets/img-2.png"),
+    avatar: require("@/assets/2.png"),
   },
   {
     id: "3",
-    name: "Erin Steed",
+    name: "Hype Bro",
     message:
       "(Sad fact: you cannot search for a gif of the word “gif”, just gives you gifs.)",
     time: "11:15 AM",
-    avatar: require("@/assets/img-3.png"),
+    avatar: require("@/assets/3.png"),
   },
   {
     id: "4",
-    name: "Daisy Tinsley",
+    name: "Talk Shit Bro",
     message: "Maybe email isn't the best form of communication.",
     time: "12:00 PM",
-    avatar: require("@/assets/img-4.png"),
+    avatar: require("@/assets/4.png"),
   },
   {
     id: "5",
-    name: "Zach Friedman",
+    name: "Creative Bro",
     message:
       "Tabs make way more sense than spaces. Convince me I'm wrong. LOL.",
     time: "1:00 PM",
-    avatar: require("@/assets/img-5.png"),
+    avatar: require("@/assets/5.png"),
   },
   {
     id: "6",
-    name: "Kyle & Aaron",
+    name: "Therapy Bro",
     message: "That's what I'm talking about!",
     time: "2:00 PM",
-    avatar: require("@/assets/img-6.png"),
-  },
-  {
-    id: "7",
-    name: "Dee McRobie",
-    message:
-      "There's no way you'll be able to jump your motorcycle over that bus.",
-    time: "3:00 PM",
-    avatar: require("@/assets/img-7.png"),
-  },
-  {
-    id: "8",
-    name: "Gary Butcher",
-    message: "Nathan is a hater, you can totes make that jump. Do it. Do it.",
-    time: "4:00 PM",
-    avatar: require("@/assets/img-8.png"),
-  },
-  {
-    id: "9",
-    name: "David Turissini",
-    message: "Message preview",
-    time: "5:00 PM",
-    avatar: require("@/assets/img-9.png"),
+    avatar: require("@/assets/6.png"),
   },
 ];

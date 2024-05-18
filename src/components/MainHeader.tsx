@@ -18,7 +18,7 @@ export const MainHeader = (props: MainHeaderProps) => {
   return (
     <View style={styles.header}>
       <View style={styles.headerTop}>
-        <Text style={styles.headerTitle}>Messages</Text>
+        <Text style={styles.headerTitle}>Talk To Bro</Text>
         <View style={styles.headerRight}>
           <TouchableOpacity style={styles.headerRightMoreButton}>
             <Ellipsis size={20} color={colors.zinc["100"]} />
